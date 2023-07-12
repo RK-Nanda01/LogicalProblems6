@@ -12,6 +12,7 @@ class Program
             Console.WriteLine("1. Fibonacci Series");
             Console.WriteLine("2. Check for Perfect Number");
             Console.WriteLine("3. Check for Prime Number");
+            Console.WriteLine("4. Reverse a Number");
             Console.WriteLine("0. Exit");
             option = Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -69,6 +70,18 @@ class Program
                         {
                             Console.WriteLine($"The number {n} is Neither Prime nor Composite");
                         }
+                        break;
+                    }
+                case 4:
+                    {
+                        int n;
+                        int res;
+                        Number num = new Number();
+                        Console.WriteLine("Enter Number to Reverse");
+                        n = Convert.ToInt32(Console.ReadLine());
+                        res = num.ReverseNumber(n);
+                        Console.WriteLine($"Before Reversing:-> {n}");
+                        Console.WriteLine($"After Reversing:-> {res}");
                         break;
                     }
 
