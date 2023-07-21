@@ -16,6 +16,7 @@ class Program
             Console.WriteLine("5. Random Numbers need to generate N unique Coupons");
             Console.WriteLine("6. Print Elapsed Time");
             Console.WriteLine("7. Vending Machine");
+            Console.WriteLine("8. Day Of the Week");
             Console.WriteLine("0. Exit");
             option = Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -120,6 +121,19 @@ class Program
                         }
                         Console.Write("\n");
 
+                        break;
+                    }
+                case 8:
+                    {
+                        UtilClass uc = new UtilClass();
+                        int d,m,y;
+                        Console.WriteLine($"Enter date");
+                        d = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine($"Enter Month");
+                        m = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine($"Enter Year");
+                        y = Convert.ToInt32(Console.ReadLine());
+                        uc.DayOfWeek(d, m, y);
                         break;
                     }
 
