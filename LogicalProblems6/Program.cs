@@ -90,15 +90,13 @@ class Program
                     {
                         int n;
                         int res;
-                        CouponNumbers coupon = new CouponNumbers();
+                        CouponNumber coupon = new CouponNumber();
                         Console.WriteLine("Enter Number of distinct coupon numbers");
                         n = Convert.ToInt32(Console.ReadLine());
                         res = coupon.RndNumberGenerated(n);
                         Console.WriteLine($"Total Random Number generated is {res}");
                         break;
                     }
-
-
 
             }
         }
