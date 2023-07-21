@@ -15,6 +15,7 @@ class Program
             Console.WriteLine("4. Reverse a Number");
             Console.WriteLine("5. Random Numbers need to generate N unique Coupons");
             Console.WriteLine("6. Print Elapsed Time");
+            Console.WriteLine("7. Vending Machine");
             Console.WriteLine("0. Exit");
             option = Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -102,6 +103,23 @@ class Program
                     {
                         ElapsedTime et = new ElapsedTime();
                         et.GetElapsedTime();
+                        break;
+                    }
+                case 7:
+                    {
+                        VendingMachine vm = new VendingMachine();
+                        int sum;
+                        Console.WriteLine($"Enter the amount");
+                        sum = Convert.ToInt32(Console.ReadLine());
+                        vm.GetChange(sum,8);
+                        Console.WriteLine($"Total Notes required {vm.totalNotes}");
+                        Console.WriteLine($"Notes given by the vending machine are :-");
+                        foreach(int v in vm.notes)
+                        {
+                            Console.Write($"{v} ");
+                        }
+                        Console.Write("\n");
+
                         break;
                     }
 
