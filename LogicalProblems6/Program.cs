@@ -13,6 +13,7 @@ class Program
             Console.WriteLine("2. Check for Perfect Number");
             Console.WriteLine("3. Check for Prime Number");
             Console.WriteLine("4. Reverse a Number");
+            Console.WriteLine("5. Random Numbers need to generate N unique Coupons");
             Console.WriteLine("0. Exit");
             option = Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -83,6 +84,17 @@ class Program
                         res = num.ReverseNumber(n);
                         Console.WriteLine($"Before Reversing:-> {n}");
                         Console.WriteLine($"After Reversing:-> {res}");
+                        break;
+                    }
+                case 5:
+                    {
+                        int n;
+                        int res;
+                        CouponNumbers coupon = new CouponNumbers();
+                        Console.WriteLine("Enter Number of distinct coupon numbers");
+                        n = Convert.ToInt32(Console.ReadLine());
+                        res = coupon.RndNumberGenerated(n);
+                        Console.WriteLine($"Total Random Number generated is {res}");
                         break;
                     }
 
