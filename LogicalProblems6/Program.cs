@@ -14,6 +14,7 @@ class Program
             Console.WriteLine("3. Check for Prime Number");
             Console.WriteLine("4. Reverse a Number");
             Console.WriteLine("5. Random Numbers need to generate N unique Coupons");
+            Console.WriteLine("6. Print Elapsed Time");
             Console.WriteLine("0. Exit");
             option = Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -95,6 +96,12 @@ class Program
                         n = Convert.ToInt32(Console.ReadLine());
                         res = coupon.RndNumberGenerated(n);
                         Console.WriteLine($"Total Random Number generated is {res}");
+                        break;
+                    }
+                case 6:
+                    {
+                        ElapsedTime et = new ElapsedTime();
+                        et.GetElapsedTime();
                         break;
                     }
 
