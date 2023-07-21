@@ -3,16 +3,22 @@ namespace LogicalProblems6
 {
 	public class Fibonacci
 	{
-		public int Fib(int n)
+		public void Fib(int n)
 		{
+			int firstNumber = 0, secondNumber=1, sum=1;
+
+			Console.Write($"{firstNumber}, {secondNumber}");
+			for(int i = 2; i<=n;i++)
+			{
+                Console.Write($", {sum}");
+                firstNumber = secondNumber;
+                secondNumber = sum;
+				sum = firstNumber + secondNumber;
+				
+			}
+
+			Console.Write("\n");
 			
-			if(n<=1) {
-				return n;
-			}
-			else {
-					
-				return Fib(n - 1) + Fib(n - 2);
-			}
 		}
 	}
 }

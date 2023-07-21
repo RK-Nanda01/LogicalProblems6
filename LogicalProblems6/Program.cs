@@ -28,7 +28,8 @@ class Program
                         Fibonacci f = new Fibonacci();
                         Console.WriteLine("Enter Number to get Fibonacci Sequence");
                         n = Convert.ToInt32(Console.ReadLine());
-                        Console.WriteLine($"The {n}th Fibonacci term is {f.Fib(n-1)}");
+                        Console.WriteLine($"The Fibonacci Sequence for {n} terms is:->");
+                        f.Fib(n);
                         break;
                     }
 
