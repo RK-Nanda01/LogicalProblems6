@@ -17,6 +17,8 @@ class Program
             Console.WriteLine("6. Print Elapsed Time");
             Console.WriteLine("7. Vending Machine");
             Console.WriteLine("8. Day Of the Week");
+            Console.WriteLine("9. Convert Temperature-> F to C");
+            Console.WriteLine("10. Convert Temperature-> C to F");
             Console.WriteLine("0. Exit");
             option = Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -134,6 +136,29 @@ class Program
                         Console.WriteLine($"Enter Year");
                         y = Convert.ToInt32(Console.ReadLine());
                         uc.DayOfWeek(d, m, y);
+                        break;
+                    }
+                case 9:
+                    {
+                        TempConvert t = new TempConvert();
+                        double tempInF;
+                        double tempInC;
+                        Console.WriteLine($"Enter Temp in Fahreheit");
+                        tempInF = Convert.ToDouble(Console.ReadLine());
+                        tempInC = t.ConvertToCelsius(tempInF);
+                        Console.WriteLine($"Temperature in Celsius is {tempInC}");
+                       
+                        break;
+                    }
+                case 10:
+                    {
+                        TempConvert t = new TempConvert();
+                        double tempInF;
+                        double tempInC;
+                        Console.WriteLine($"Enter Temp in Celsius");
+                        tempInC = Convert.ToDouble(Console.ReadLine());
+                        tempInF = t.ConvertToFahrenheit(tempInC);
+                        Console.WriteLine($"Temperature in Fahrenheit is {tempInF}");
                         break;
                     }
 
