@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Security.Principal;
+
 namespace LogicalProblems6
 {
 	public class UtilClass
@@ -49,6 +51,16 @@ namespace LogicalProblems6
                     }
             }
 		}
+        public double MonthlyPayment(int principalAmount,int year, double rate)
+        {
+          
+            double monthlyInterestRate = rate / (12 * 100); // Convert interest rate to monthly rate
+            int totalMonths = year * 12;
+            double monthlyPayment = (principalAmount * monthlyInterestRate) / (1 - Math.Pow(1 + monthlyInterestRate, -totalMonths));
+            return monthlyPayment;
+        }
 	}
+
+
 }
 

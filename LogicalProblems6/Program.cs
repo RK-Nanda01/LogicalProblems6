@@ -1,4 +1,6 @@
-﻿namespace LogicalProblems6;
+﻿using System;
+
+namespace LogicalProblems6;
 class Program
 {
     static void Main(string[] args)
@@ -19,6 +21,7 @@ class Program
             Console.WriteLine("8. Day Of the Week");
             Console.WriteLine("9. Convert Temperature-> F to C");
             Console.WriteLine("10. Convert Temperature-> C to F");
+            Console.WriteLine("11. Calculate Monthly Payment");
             Console.WriteLine("0. Exit");
             option = Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -159,6 +162,21 @@ class Program
                         tempInC = Convert.ToDouble(Console.ReadLine());
                         tempInF = t.ConvertToFahrenheit(tempInC);
                         Console.WriteLine($"Temperature in Fahrenheit is {tempInF}");
+                        break;
+                    }
+                case 11:
+                    {
+                        UtilClass pay = new UtilClass();
+                        int amount, year;
+                        double rate;
+                        Console.WriteLine($"Enter Value of Amount");
+                        amount = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine($"Enter Year");
+                        year = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine($"Enter Rate of Interest");
+                        rate = Convert.ToDouble(Console.ReadLine());
+                        double monthlyPayment = pay.MonthlyPayment(amount, year, rate);
+                        Console.WriteLine($"Monthly Payment to be made is {monthlyPayment}");
                         break;
                     }
 
