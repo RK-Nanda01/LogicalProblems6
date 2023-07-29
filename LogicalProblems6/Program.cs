@@ -22,6 +22,7 @@ class Program
             Console.WriteLine("9. Convert Temperature-> F to C");
             Console.WriteLine("10. Convert Temperature-> C to F");
             Console.WriteLine("11. Calculate Monthly Payment");
+            Console.WriteLine("12. Calculate Sqrt of a positive Number");
             Console.WriteLine("0. Exit");
             option = Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -177,6 +178,22 @@ class Program
                         rate = Convert.ToDouble(Console.ReadLine());
                         double monthlyPayment = pay.MonthlyPayment(amount, year, rate);
                         Console.WriteLine($"Monthly Payment to be made is {monthlyPayment}");
+                        break;
+                    }
+                case 12:
+                    {
+                        int n;
+                        Console.WriteLine("Enter a Non-Negative Number");
+                        n = Convert.ToInt32(Console.ReadLine());
+                        if(n < 0)
+                        {
+                            Console.WriteLine("Enter a Non-Negative Number");
+                        }
+                        else
+                        {
+                            double sqrt = Number.GetSquareRoot(n);
+                            Console.WriteLine($"Square Root of {n} is {sqrt}");
+                        }    
                         break;
                     }
 

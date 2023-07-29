@@ -15,6 +15,18 @@ namespace LogicalProblems6
 
 			return newNumber;
 		}
+
+		public static double GetSquareRoot(int number)
+		{
+            double epsilon = 1e-15; // The precision of the result
+            double t = number; 
+            while (Math.Abs(t - number / t) > epsilon * t)
+            {
+                t = (number / t + t) / 2.0;
+                
+            }
+            return t;
+        }
 	}
 }
 
