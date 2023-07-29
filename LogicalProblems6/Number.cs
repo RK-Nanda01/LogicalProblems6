@@ -39,6 +39,10 @@ namespace LogicalProblems6
 
                 // Convert the integer value of 'bit' to a character representation ('0' or '1')
                 Console.Write((char)(bit + '0'));
+               if(i%4 == 0)
+                {
+                    Console.Write(" ");
+                }
             }
 
             Console.Write("\n");
