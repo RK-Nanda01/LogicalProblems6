@@ -28,24 +28,21 @@ namespace LogicalProblems6
             return t;
         }
 
-		public static void ToBinary(int num)
+		public static char[] ToBinary(int num)
 		{
             const int bits = 32;
-
+            char[] binaryForm = new char[32];
             for (int i = bits - 1; i >= 0; i--)
             {
                 // Calculate the bit value at the current position
                 int bit = (num & (1 << i)) == 0 ? 0 : 1;
 
                 // Convert the integer value of 'bit' to a character representation ('0' or '1')
-                Console.Write((char)(bit + '0'));
-               if(i%4 == 0)
-                {
-                    Console.Write(" ");
-                }
+                binaryForm[bits - i - 1] = (char)(bit + '0');
+               
             }
 
-            Console.Write("\n");
+            return binaryForm;
 
         }
     }

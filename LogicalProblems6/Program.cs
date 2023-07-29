@@ -24,6 +24,7 @@ class Program
             Console.WriteLine("11. Calculate Monthly Payment");
             Console.WriteLine("12. Calculate Sqrt of a positive Number");
             Console.WriteLine("13. Get Binary of a Number");
+            Console.WriteLine("14. Swap Nibbles of Binary of a Number");
             Console.WriteLine("0. Exit");
             option = Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -200,9 +201,43 @@ class Program
                 case 13:
                     {
                         int n;
+                        char[] binaryForm = new char[32];
                         Console.WriteLine("Enter Number to convert to Binary");
                         n = Convert.ToInt32(Console.ReadLine());
-                        Number.ToBinary(n);
+
+                        binaryForm = Number.ToBinary(n);
+                        for(int i = 0;i<32; i++)
+                        {
+                            if(i!=0 && i%4 == 0)
+                            {
+                                Console.Write(" ");
+                            }
+                            Console.Write(binaryForm[i]);
+
+                        }
+
+                        Console.Write("\n");
+                        break;
+                    }
+                case 14:
+                    {
+                        int n;
+                        bool isPowerOf2;
+                        Binary bin = new Binary();
+                        int swapped;
+                        Console.WriteLine("Enter Number to swap and check");
+                        n = Convert.ToInt32(Console.ReadLine());
+                        swapped = bin.SwapNibbles(n);
+                        isPowerOf2 = bin.IsPowerOf2(swapped);
+                        if(isPowerOf2)
+                        {
+                            Console.WriteLine("It is a power of 2");
+                        }
+                        else
+                        {
+                            Console.WriteLine("It is NOT a power of 2");
+                        }
+
                         break;
                     }
 
