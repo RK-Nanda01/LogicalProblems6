@@ -23,6 +23,7 @@ class Program
             Console.WriteLine("10. Convert Temperature-> C to F");
             Console.WriteLine("11. Calculate Monthly Payment");
             Console.WriteLine("12. Calculate Sqrt of a positive Number");
+            Console.WriteLine("13. Get Binary of a Number");
             Console.WriteLine("0. Exit");
             option = Convert.ToInt32(Console.ReadLine());
             switch (option)
@@ -194,6 +195,14 @@ class Program
                             double sqrt = Number.GetSquareRoot(n);
                             Console.WriteLine($"Square Root of {n} is {sqrt}");
                         }    
+                        break;
+                    }
+                case 13:
+                    {
+                        int n;
+                        Console.WriteLine("Enter Number to convert to Binary");
+                        n = Convert.ToInt32(Console.ReadLine());
+                        Number.ToBinary(n);
                         break;
                     }
 
